@@ -1,6 +1,6 @@
 // Jenkinsfile (Declaritive Pipeline)
 pipeline {
-	angent any
+	agent any
 	environment {
 		DOCKERHUB_CREDS = credentials("docker")
 	}
@@ -38,12 +38,12 @@ pipeline {
 				sh 'docker push mboyce03/cw2-server:0.1'
 			}
 		}
-		stage('Deploy') {
-			steps{
-				sshagent(['jenkins-k8s-ssh-key']) {
-					sh ' '
-				}
-			}
-		}
+	//	stage('Deploy') {
+	//		steps{
+	//			sshagent(['jenkins-k8s-ssh-key']) {
+	//				sh ' '
+	//			}
+	//		}
+	//	}
 	}
 }	

@@ -14,7 +14,7 @@ pipeline {
 			}
 		}
 
-		stage('Test Docker Image') {
+		stage('Test Docker Image ') {
 			steps {
 				echo 'Testing Docker Image...'
 				sh '''

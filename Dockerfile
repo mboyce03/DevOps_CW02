@@ -11,7 +11,7 @@ COPY package*.json ./
 # Install dependencies inside the container
 RUN npm install --verbose
 
-# Copy the rest of the application code (server.js, etc.)
+# Copy the rest of the application code (server.js, etc. )
 COPY . .
 
 # Expose the port that the application will run on

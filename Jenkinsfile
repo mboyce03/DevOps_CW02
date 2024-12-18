@@ -43,9 +43,8 @@ pipeline {
             steps {
                 sshagent(['jenkins-k8s-ssh-key']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@PROD_SERVER_IP '
-                    cd /path/to/ansible-playbooks &&
-                    ansible-playbook -i inventory imageDeployment.yml --extra-vars "docker_image=mboyce03/cw2-server:0.1"
+                    ssh -o StrictHostKeyChecking=no ubuntu@34.207.60.96 '
+                    ansible-playbook ~/imageDeployment.yml --extra-vars "docker_image=mboyce03/cw2-server:0.1"
                     '
                     '''
                 }

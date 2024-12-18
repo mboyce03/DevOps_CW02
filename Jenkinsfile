@@ -6,7 +6,7 @@ pipeline {
 	}
 	stages {
 
-		stages('Docker Image Build') {
+		stage('Docker Image Build') {
 			steps {
 				echo 'Building Docker Image...'
 				sh 'docker build --tag mboyce03/cw2-server:0.1 .'
